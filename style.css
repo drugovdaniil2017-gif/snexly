@@ -1,0 +1,459 @@
+/* Элегантный кофейный минимализм с фонами */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #3E2723;
+    background: #FAF7F5;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка - элегантная */
+header {
+    background: rgba(93, 64, 55, 0.95);
+    color: #FFF8E1;
+    padding: 1.2rem 0;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(93, 64, 55, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    border-radius: 8px;
+    filter: brightness(0) invert(1);
+}
+
+.logo h1 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #FFF8E1;
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: #FFF8E1;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover, nav a.active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Основной контент */
+main {
+    margin-top: 80px;
+    min-height: calc(100vh - 160px);
+    padding: 3rem 0;
+}
+
+/* Герой секция - с фоном кофе */
+.hero {
+    background: linear-gradient(rgba(93, 64, 55, 0.85), rgba(141, 110, 99, 0.85)), 
+                url('https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #FFF8E1;
+    padding: 6rem 0;
+    text-align: center;
+    margin-bottom: 4rem;
+    border-radius: 16px;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    color: #D7CCC8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero button {
+    background: #FFF8E1;
+    color: #5D4037;
+    border: none;
+    padding: 1.3rem 3.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero button:hover {
+    background: #FFECB3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Особенности - элегантные */
+.about-preview {
+    padding: 4rem 0;
+}
+
+.about-preview h2 {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    color: #5D4037;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.feature {
+    padding: 2.5rem;
+    background: white;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(93, 64, 55, 0.1);
+    border: 1px solid #E0E0E0;
+}
+
+.feature h3 {
+    color: #5D4037;
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.feature p {
+    color: #795548;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Каталог - только 3 вида кофе */
+.catalog {
+    padding: 4rem 0;
+}
+
+.catalog h2 {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    color: #5D4037;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.product {
+    padding: 2.5rem;
+    background: white;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(93, 64, 55, 0.1);
+    border: 1px solid #E0E0E0;
+    transition: all 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(93, 64, 55, 0.15);
+}
+
+.product img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    border: 3px solid #F5F5F5;
+}
+
+.product h3 {
+    color: #5D4037;
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.product p {
+    color: #795548;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.price {
+    font-weight: 700;
+    color: #5D4037;
+    font-size: 1.8rem;
+    display: block;
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+/* Таблица цен - улучшенная */
+.price-table {
+    padding: 4rem 0;
+}
+
+.price-table h2 {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    color: #5D4037;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.price-container {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 8px 30px rgba(93, 64, 55, 0.1);
+    border: 1px solid #E0E0E0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1.8rem;
+    text-align: left;
+    border-bottom: 1px solid #EEEEEE;
+    font-size: 1.1rem;
+}
+
+th {
+    background: linear-gradient(135deg, #5D4037 0%, #8D6E63 100%);
+    color: #FFF8E1;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+td {
+    color: #3E2723;
+    position: relative;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background: #FFF8E1;
+}
+
+tr:hover {
+    background: #FFECB3;
+}
+
+.price-badge {
+    background: #5D4037;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+/* О нас - с фоном покупателей */
+.about-content {
+    padding: 4rem 0;
+    background: linear-gradient(rgba(250, 247, 245, 0.9), rgba(250, 247, 245, 0.9)), 
+                url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 16px;
+}
+
+.about-content .container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.about-content h2 {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    color: #5D4037;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.about-content h3 {
+    margin: 2.5rem 0 1.2rem 0;
+    color: #5D4037;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #D7CCC8;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    color: #5D4037;
+    font-size: 1.1rem;
+}
+
+.map {
+    margin-top: 3.5rem;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(93, 64, 55, 0.1);
+    border: 1px solid #E0E0E0;
+}
+
+.map h3 {
+    margin-bottom: 1.5rem;
+    color: #5D4037;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* Подвал - элегантный */
+footer {
+    background: #5D4037;
+    color: #FFF8E1;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+footer p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 968px) {
+    .features, .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    
+    nav ul {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero {
+        padding: 4rem 0;
+    }
+    
+    .hero h2 {
+        font-size: 2.4rem;
+    }
+    
+    .features, .products {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .feature, .product {
+        padding: 2rem;
+    }
+    
+    .price-container {
+        padding: 2rem;
+    }
+    
+    th, td {
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero {
+        padding: 3rem 0;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .hero button {
+        padding: 1rem 2.5rem;
+    }
+    
+    .about-content .container {
+        padding: 2rem;
+    }
+}
